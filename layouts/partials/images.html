@@ -1,0 +1,36 @@
+{{ with .Resources.ByType "image" }}
+	<div class="images">
+	{{ range . }}
+		<img class="mySlides" src={{.RelPermalink}}>
+	{{ end }}
+	<div class="buttons"> 
+	<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+</div>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var buttons = document.getElementsByClassName("w3-button")
+		  if (x.length <= 1) {
+		  	for (var i = buttons.length - 1; i >= 0; i--) {
+		  		buttons[i].style.display = "none";
+		  	}
+		  }
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length} ;
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+		  }
+		  x[slideIndex-1].style.display = "block";
+		}
+	</script>
+</div>
+{{ end }}

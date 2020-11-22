@@ -8,7 +8,11 @@
         {{ partial "tags" . }}
     </div>
 
-    <div align="start" class="content">{{ .Content }}</div>
+    <div align="start" class="content">
+        {{ partial "images" .}}
+        {{ .Content }}
+    </div>
+
 
 </main>
 

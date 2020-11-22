@@ -28,7 +28,7 @@ img {
 
 .intro > h1 {
     color: #212121;
-    font-size: 12vh;
+    font-size: 9vh;
 }
 
 .intro > h2 {
@@ -105,4 +105,23 @@ a:hover {
 
 footer {
     border-bottom: var(--border-width) solid var(--accent);
+}
+
+/* Image display */
+
+.images {
+    display: block;
+    margin: auto;
+    width: 65%;
+}
+
+.images > .buttons {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+}
+
+.images > button {
+    border: none; 
 }
