@@ -11,7 +11,10 @@
     <div align="start" class="content">
         {{ partial "images" .}}
         {{ .Content }}
+        {{ partial "render-script" .}}
     </div>
+
+
 
     <!-- Related posts -->
     {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
