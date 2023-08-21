@@ -1,0 +1,10 @@
+{{ with .Params.inlineJs }}
+	<script type="text/javascript">	
+		{{ readFile . }}	
+	</script>
+	{{ end }}
+	{{ with .Params.elmSourceJs }}
+		{{ $elmJs := resources.get . | js.Build "elmsrc.js" | minify | fingerprint }}
+		<div id="elm-app"></div>
+		<script src={{ $elmJs.RelPermalink }}></script>
+	{{ end }}
