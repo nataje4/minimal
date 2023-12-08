@@ -22,8 +22,8 @@ img {
 }
 
 p {
-    margin: 20px 0;
-    font-size:  1.1em;
+    margin: 35px 0;
+    font-size:  1.2em;
 }
 
 blockquote {
@@ -32,17 +32,20 @@ blockquote {
 
 /* Homepage */
 
+
 .intro {
-    transform: translateY(22vh);
+    margin:  15vh 0;  
 }
 
 .intro > h1 {
     color: color: var(--text-color);
-    font-size: 9vh;
+    font-size: 7vh;
+    margin: 10px;
 }
 
 .intro > h2 {
     color:  var(--text-color-light);
+    margin-bottom: 4vh;
 }
 
 /* Page content */
@@ -58,15 +61,14 @@ h2 {
 /* Profile picture */
 
 .profile {
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
+    width: 40vh;
 }
 
 /* Colored links */
 
 a:link, a:visited {
     color: var(--item-color);
+    font-style: italic;
 }
 
 a.icon:hover {
@@ -81,6 +83,7 @@ a:hover {
 
 .copyright {
     margin: 15px 0;
+    font-size: 1em;
 }
 
 /* Paginator */
@@ -113,10 +116,6 @@ a:hover {
 .navbar-icon {
     font-size: 125%;
     display: inline-block !important;
-}
-
-.navbar-header {
-    background-color: var(--background);
 }
 
 /* Colored borders at top/bottom of page */
