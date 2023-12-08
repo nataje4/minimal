@@ -7,6 +7,7 @@ body {
     display: flex;
     text-align: center;
     flex-direction: column;
+    color: color: var(--text-color);
 }
 
 main {
@@ -36,12 +37,12 @@ blockquote {
 }
 
 .intro > h1 {
-    color: #212121;
+    color: color: var(--text-color);
     font-size: 9vh;
 }
 
 .intro > h2 {
-    color: #757575;
+    color:  var(--text-color-light);
 }
 
 /* Page content */
@@ -65,7 +66,7 @@ h2 {
 /* Colored links */
 
 a:link, a:visited {
-    color: var(--accent);
+    color: var(--item-color);
 }
 
 a.icon:hover {
@@ -112,6 +113,10 @@ a:hover {
 .navbar-icon {
     font-size: 125%;
     display: inline-block !important;
+}
+
+.navbar-header {
+    background-color: var(--background);
 }
 
 /* Colored borders at top/bottom of page */
